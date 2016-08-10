@@ -1,5 +1,5 @@
 # Snipenator
-## Side project for public use - code generator with JavaScript.
+__Side project for public use - code generator with JavaScript.__
 
 ![Snipenator - Poster Image](https://raw.githubusercontent.com/Stilyan-Kangalov/Snipenator/master/assets/snip_poster.jpg "Current Screenshot")
 
