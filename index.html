@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+  <title>Snipenator &#47;&#62;</title>
+  <!--Import Google Icon Font-->
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen" />
+  <link type="text/css" rel="stylesheet" href="css/style.css" media="screen" />
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="description" content="Accelerate your workflow with short customized snippets." />
+  <meta name="author" content="Stilyan Kangalov" />
+  <meta name="copyright" content="Stilyan Kangalov - SiteQuite.com" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Snipenator" />
+  <meta property="og:image" content="http://snipenator.com/images/tmfb_logo.jpg" />
+  <meta property="og:site_name" content="Web App - Snipenator" />
+  <meta property="og:description" content="Accelerate your workflow with short customized snippets." />
+  <link rel="shortcut icon" type="image/ico" sizes="any" href="assets/favicon.ico">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> </head>
+
+<body>
+  <!-- Page Layout here -->
+  <div class="row">
+    <div class="col s12 m3 l2"> <img src="images/snip-logo1.jpg" id="logo-img" alt="Snipenator Logo" />
+      <nav class="top-nav">
+        <div class="container">
+          <div class="nav-wrapper">
+            <ul class="fixed">
+              <li><a class="page-title"><i class="icon-fix material-icons">aspect_ratio</i><h1 class="trn">Снимки</h1></a></li>
+              <li><a class="page-title"><i class="icon-fix material-icons">code</i><h2 class="trn">Линкове</h2></a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div style="text-align: center;padding: 12px;"> <a onclick="translator.lang('bg');" style="margin-right: 10px;" class="btn-floating btn-small indigo lighten-2">
+      BG
+    </a> <a onclick="translator.lang('en');" class="btn-floating btn-small indigo lighten-2">
+      EN
+    </a> </div>
+    </div>
+    <div id="content" class="col s12 m9 20">
+      <table>
+        <thead>
+          <tr>
+            <th class="trn" data-field="id">Елемент</th>
+            <th class="trn" data-field="name">Стойност</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="trn">Адрес на снимката</span>:</td>
+            <td>
+              <form action="#">
+                <input type="text" id="userUrl" name="ImageUrl" placeholder="image url"> </form>
+            </td>
+          </tr>
+          <tr>
+            <td><span class="trn">Клас</span>:</td>
+            <td>
+              <form action="#">
+                <input type="text" id="userClass" name="ImageClass" placeholder="image class"> </form>
+            </td>
+          </tr>
+          <tr>
+            <td><span class="trn">Алт таг</span>:</td>
+            <td>
+              <form action="#">
+                <input type="text" id="userAlt" name="AltTag" placeholder="describe your image"> </form>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <form action="#">
+                <p>
+                  <input name="group1" type="radio" id="autoON" />
+                  <label class="trn" for="autoON">Сложи автоматично ID</label>
+                </p>
+                <p>
+                  <input name="group1" type="radio" id="autoOFF" />
+                  <label class="trn" for="autoOFF">Задай ръчно ID таг</label>
+                </p>
+              </form>
+            </td>
+            <td>
+              <form action="#">
+                <input type="text" id="userID" name="AltTag" placeholder="some text for custom ID tag"> </form>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <button id="gen-btn" onclick="getInfo();" class="waves-effect waves-light btn trn">Генерирай код!</button>
+      <div id="resBox" class="row">
+        <div class="col s12 m6">
+          <p class="trn">Предварителен Изглед:</p>
+          <div id="preview"><img src="http://snipenator.com/images/img-preview.jpg" id="img-7396" class="web-img" alt="Preview Image" /></div>
+        </div>
+        <div id="text-area" class="col s12 m6">
+          <div id="result"></div>
+          <button class="btn flt" data-clipboard-action="copy" data-clipboard-target="#result"><i class="material-icons" style="font-size:26px">assignment</i></button>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <h4>Po ka?!... Bi-do!</h4> <img src="images/minion-crazy.jpg" alt="Crazy Minion" />
+        <p class="size-p">Моля, въведи текст в полето за ID таг.</p>
+      </div>
+      <div class="modal-footer"> <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">OK!</a> </div>
+    </div>
+    <div id="modal2" class="modal">
+      <div class="modal-content">
+        <h4>Grrr!!! NO ID?!</h4> <img src="images/minion-crazy1.jpg" alt="Crazy Minion" />
+        <p class="size-p">Забравил си да избереш опция за ID.
+          <br />Направи промяна и опитай пак!</p>
+      </div>
+      <div class="modal-footer"> <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">OK!</a> </div>
+    </div>
+    <div id="modal3" class="modal">
+      <div class="modal-content">
+        <h4>Po ka?!... Bi-do!</h4> <img src="images/minion-crazy.jpg" alt="Crazy Minion" />
+        <p class="size-p">Забравил си да сложиш адрес на снимката.
+          <br />Направи промяна и опитай пак!</p>
+      </div>
+      <div class="modal-footer"> <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">OK!</a> </div>
+    </div>
+    <div id="modal4" class="modal">
+      <div class="modal-content">
+        <h4>Po ka?!... Bi-do!</h4> <img src="images/minion-crazy.jpg" alt="Crazy Minion" />
+        <p class="size-p">Забравил си да сложиш стойност за клас.
+          <br />Направи промяна и опитай пак!</p>
+      </div>
+      <div class="modal-footer"> <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">OK!</a> </div>
+    </div>
+    <div id="modal5" class="modal">
+      <div class="modal-content">
+        <h4>Po ka?!... Bi-do!</h4> <img src="images/minion-crazy.jpg" alt="Crazy Minion" />
+        <p class="size-p">Забравил си да сложиш стойност за Алт таг.
+          <br />Направи промяна и опитай пак!</p>
+      </div>
+      <div class="modal-footer"> <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">OK!</a> </div>
+    </div>
+    <div id="modal6" class="modal">
+      <div class="modal-content">
+        <h4>Po ka?!... Ba-zaa!</h4> <img src="images/minion-crazy_tazz.jpg" alt="Crazy Minion" />
+        <p class="size-p">Кавичките са забранени !!!</p>
+      </div>
+      <div class="modal-footer"> <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">OK!</a> </div>
+    </div>
+    <div id="modal7" class="modal">
+      <div class="modal-content">
+        <h4>Po ka?!... Bi-do!</h4> <img src="images/minion-crazy.jpg" alt="Crazy Minion" />
+        <p class="size-p">Адресът на снимката е невалиден!
+          <br />Направи промяна и опитай пак.</p>
+      </div>
+      <div class="modal-footer"> <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">OK!</a> </div>
+    </div>
+    <a href="http://www.minionsmovie.com" target="_blank"> <img id="footer-img" src="images/minion-page.png" alt="Hide Minion" /> </a>
+  </div>
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/jquery.translate.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/clipboard.js/1.5.12/clipboard.min.js"></script>
+  <script>
+    new Clipboard('.btn');
+  </script>
+</body>
+
+</html>
