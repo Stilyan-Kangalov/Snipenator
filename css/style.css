@@ -57,7 +57,16 @@ nav {
 }
 
 button:focus {
-    background-color: #163249;
+  background-color: #163249;
+}
+
+#lang-buttons {
+  text-align: center;
+  padding: 12px;
+}
+
+#fix-lang-but {
+  margin-right: 10px;
 }
 
 nav ul li {
@@ -66,7 +75,7 @@ nav ul li {
 }
 
 .modal-footer a {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 [type="radio"]:checked + label::after, .with-gap[type="radio"]:checked + label::after {
