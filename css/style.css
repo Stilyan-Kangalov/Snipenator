@@ -156,15 +156,17 @@ input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]),
 }
 
 @media only screen and (max-width: 1600px) {
-    #result {padding: 11.5% 10px 10px;} 
+  #result {padding: 11.5% 10px 10px;} 
 }
 
 @media only screen and (min-width: 240px) and (max-width: 992px) {
-    #gen-btn {
-    display: block !important;
-    margin: 0 auto;
+  #gen-btn {
+  display: block !important;
+  margin: 0 auto;
 }
-    i.icon-fix {
-    display: none !important;
+  i.icon-fix {display: none !important;}
 }
+
+@media only screen and (min-width: 240px) and (max-width: 1200px) {
+  .modal {width: 85%;}
 }
