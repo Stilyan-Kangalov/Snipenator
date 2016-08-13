@@ -1,6 +1,8 @@
 /*jslint browser: true*/
 /*global $, jQuery*/
 
+// Set event listener with modal window to notify user, when he/she is entering quotes.
+
 document.addEventListener("keydown", function (event) {
   "use strict";
   if (event.which === 222) {
@@ -8,6 +10,8 @@ document.addEventListener("keydown", function (event) {
 	  return;
   }
 });
+
+// Set the main function and all vars.
 
 function getInfo() {
 	"use strict";
@@ -22,19 +26,21 @@ function getInfo() {
 		resultCode = '<img src="' + imgUrl + '" id="' + randomID + '" class="' + imgClass + '" alt="' + imgAlt + '" />',
 		resultCode2 = '<img src="' + imgUrl + '" id="' + imgID + '" class="' + imgClass + '" alt="' + imgAlt + '" />',
 		halfUrl = imgUrl.includes("http");
-		
+	
+    // Find out if the URL is correct.	
 	if (halfUrl === false) {
 		$('#modal7').openModal();
 		return;
 	}
-	
+  
+	// Prevent generating code with quotes.
 	if (imgUrl.indexOf("\'") >= 0 || imgUrl.indexOf("\"") >= 0 || imgClass.indexOf("\'") >= 0 || imgClass.indexOf("\"") >= 0 ||
 	            imgAlt.indexOf("\'") >= 0 || imgAlt.indexOf("\"") >= 0 || imgID.indexOf("\'") >= 0 || imgID.indexOf("\"") >= 0) {
 		$('#modal6').openModal();
 		return;
 	}
 
-	
+	// Detect missing fields - url, class and alt tag.
 	if (imgUrl === undefined || imgUrl  === null || imgUrl === "") {
 		$('#modal3').openModal();
 		return;
@@ -47,7 +53,7 @@ function getInfo() {
 	}
 	
 	
-	
+	// Printing the code and Image preview + Test for ID tag.
 	if (imgIdOn === false && imgIdOff === false) {
 		$('#modal2').openModal();
 	} else {
@@ -67,6 +73,8 @@ function getInfo() {
 	}
 
 }
+
+// Set the dictionary variable for translation.
 
 var dict = {
   "Снимки": {
@@ -114,5 +122,7 @@ var dict = {
     bg: "Предварителен Изглед:"
   }
 };
+
+// Set the main language of the site, when is loaded for first time.
 
 var translator = $('body').translate({lang: "bg", t: dict});
