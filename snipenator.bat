@@ -17,5 +17,6 @@ call git commit -a -m "Automated commit by Speedy_Git.bat on %currentTime%"
 call git push origin master
 echo =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 echo.
-echo ### Great, everything went well! Press any key for exit.
-pause >nul
+echo ### Great, everything went well!
+timeout /t 40
+exit
