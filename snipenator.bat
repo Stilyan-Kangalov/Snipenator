@@ -18,5 +18,5 @@ call git push origin master
 echo =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 echo.
 echo ### Great, everything went well!
-timeout /t 40
+timeout /t 15
 exit
