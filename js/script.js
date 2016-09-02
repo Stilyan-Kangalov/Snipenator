@@ -124,6 +124,14 @@ var dict = {
   "Моля, въведи текст в полето за ID таг.": {
     en: "Please, put some text in field for ID tag.",
     bg: "Моля, въведи текст в полето за ID таг."
+  },
+  "Направи промяна и опитай пак!": {
+    en: "Make some changes and try again.",
+    bg: "Направи промяна и опитай пак!"
+  },
+  "Забравил си да избереш опция за ID.": {
+    en: "You forget to choose an option for ID.",
+    bg: "Забравил си да избереш опция за ID."
   }
 };
 
