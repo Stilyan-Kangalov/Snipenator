@@ -130,8 +130,8 @@ var dict = {
     bg: "Направи промяна и опитай пак!"
   },
   "Забравил си да избереш опция за ID.": {
-    en: "You forget to choose an option for ID...",
-    bg: "Забравил си да избереш опция за ID..."
+    en: "You forget to choose an option for ID.",
+    bg: "Забравил си да избереш опция за ID."
   }
 };
 
