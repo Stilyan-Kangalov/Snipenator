@@ -35,3 +35,8 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Speedy-Git files #
+####################
+snipenator.bat
+test.txt
