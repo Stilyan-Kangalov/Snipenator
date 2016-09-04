@@ -132,7 +132,11 @@ var dict = {
   "Забравил си да избереш опция за ID.": {
     en: "You forget to choose an option for ID.",
     bg: "Забравил си да избереш опция за ID."
-  }
+  },
+  "Забравил си да сложиш адрес на снимката.": {
+    en: "You forget to put adress for the image.",
+    bg: "Забравил си да сложиш адрес на снимката."
+  },
 };
 
 // Set the main language of the site, when is loaded for first time.
