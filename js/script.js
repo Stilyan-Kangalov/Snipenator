@@ -137,6 +137,22 @@ var dict = {
     en: "You forget to put adress for the image.",
     bg: "Забравил си да сложиш адрес на снимката."
   },
+  "Забравил си да сложиш стойност за клас.": {
+    en: "You forget to put text for class value.",
+    bg: "Забравил си да сложиш стойност за клас."
+  },
+  "Забравил си да сложиш стойност за Алт таг.": {
+    en: "You forget to put text for the alt tag.",
+    bg: "Забравил си да сложиш стойност за Алт таг."
+  },
+  "Кавичките са забранени !!!": {
+    en: "The quotes are banned.",
+    bg: "Кавичките са забранени !!!"
+  },
+  "Адресът на снимката е невалиден!": {
+    en: "The adress of your image is not valid.",
+    bg: "Адресът на снимката е невалиден!"
+  }
 };
 
 // Set the main language of the site, when is loaded for first time.
