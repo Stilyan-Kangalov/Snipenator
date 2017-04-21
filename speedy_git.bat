@@ -13,7 +13,7 @@ echo =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 echo.
 REM add all new files with auto-commit
 call git add .
-call git commit -a -m "Automated commit by Speedy_Git.bat on %currentTime%"
+call git commit -a -m "Automated commit by Speedy_Git on %currentTime%"
 call git push origin master
 echo =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 echo.
