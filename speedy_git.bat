@@ -8,7 +8,7 @@ REM get date and time
 for /f "delims=" %%a in ('date/t') do @set mydate=%%a
 for /f "delims=" %%a in ('time/t') do @set mytime=%%a
 set currentTime=%mydate%%mytime%
-call git status
+call git status 
 echo =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 echo.
 REM add all new files with auto-commit
