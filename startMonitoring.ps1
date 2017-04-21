@@ -12,7 +12,7 @@
                 Add-content "D:\log.txt" -value $logline
               }
 			  
-	$action1 = { cmd.exe /c 'speedy_git.bat' }
+	$action1 = cmd.exe /c 'speedy_git.bat' 
 	
 ### DECIDE WHICH EVENTS SHOULD BE WATCHED 
     Register-ObjectEvent $watcher "Created" -Action $action1
