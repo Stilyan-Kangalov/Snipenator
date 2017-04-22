@@ -1,5 +1,5 @@
 @ECHO OFF
-
+REM get current time and set it up
 for /f "delims=" %%a in ('date/t') do @set mydate=%%a
 for /f "delims=" %%a in ('time/t') do @set mytime=%%a
 set currentTime=%mydate%%mytime%
