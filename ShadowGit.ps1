@@ -5,7 +5,7 @@
     $watcher.IncludeSubdirectories = $true
     $watcher.EnableRaisingEvents = $true  
 
-### DEFINE ACTIONS AFTER AN EVENT IS DETECTED 
+### DEFINE ACTIONS AFTER AN EVENT IS DETECTED
     $action = { cmd.exe /c 'Speedy_Git.bat'  } 
 	
 ### DECIDE WHICH EVENTS SHOULD BE WATCHED
