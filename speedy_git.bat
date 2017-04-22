@@ -8,3 +8,4 @@ call git add .
 call git commit -a -m "Automated commit by Speedy_Git on %currentTime%"
 call git push origin master
 exit
+
