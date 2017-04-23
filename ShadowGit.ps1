@@ -13,15 +13,15 @@
               } 	
 
 ### DEFINE ACTIONS AFTER AN EVENT IS DETECTED
-    $action2 =  & "G:\Side_Project\Snipenator\Speedy_Git.bat" ;
+    $action2 = { & "G:\Side_Project\Snipenator\Speedy_Git.bat" exit }
 	
 	$action3 = { cmd.exe /c 'git add .'  } 
 	
 ###	$action4 = Start-Process -FilePath "G:\Side_Project\Snipenator\Speedy_Git.bat";
 	
 ### DECIDE WHICH EVENTS SHOULD BE WATCHED
-    Register-ObjectEvent $watcher "Created" -Action $action2 
-    Register-ObjectEvent $watcher "Changed" -Action $action2 
+    Register-ObjectEvent $watcher "Created" -Action $action2
+    Register-ObjectEvent $watcher "Changed" -Action $action2
     Register-ObjectEvent $watcher "Deleted" -Action $action2
     Register-ObjectEvent $watcher "Renamed" -Action $action2
 	while ($true) {sleep 5}
