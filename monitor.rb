@@ -11,7 +11,5 @@ FileWatcher.new(["G:/Side_Project/Snipenator"]).watch() do |filename, event|
     puts "File deleted: " + filename
 	system "start G:\\Side_Project\\Snipenator\\test_me.bat"
   end
-  if(event == :renamed)
-    puts "File deleted: " + filename
-  end
+    puts event
 end
