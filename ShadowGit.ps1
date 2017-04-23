@@ -17,7 +17,7 @@
 	
 	$action3 = { cmd.exe /c 'git add .'  } 
 	
-	$action4 = { Start-Process -FilePath "G:\Side_Project\Snipenator\Speedy_Git.bat" }
+	$action4 = { Start-Process -FilePath "G:\Side_Project\Snipenator\Speedy_Git.bat" -Wait -passthru }
 	
 ### DECIDE WHICH EVENTS SHOULD BE WATCHED
     Register-ObjectEvent $watcher "Created" -Action $action4
