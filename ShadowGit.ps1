@@ -15,9 +15,11 @@
 ### DEFINE ACTIONS AFTER AN EVENT IS DETECTED
     $action = { cmd.exe /c 'Speedy_Git.bat'  } 
 	
+	$action2 = { cmd.exe /c 'git add .'  } 
+	
 ### DECIDE WHICH EVENTS SHOULD BE WATCHED
-    Register-ObjectEvent $watcher "Created" -Action $action
-    Register-ObjectEvent $watcher "Changed" -Action $action
-    Register-ObjectEvent $watcher "Deleted" -Action $action
-    Register-ObjectEvent $watcher "Renamed" -Action $action
+    Register-ObjectEvent $watcher "Created" -Action $action2
+    Register-ObjectEvent $watcher "Changed" -Action $action2
+    Register-ObjectEvent $watcher "Deleted" -Action $action2
+    Register-ObjectEvent $watcher "Renamed" -Action $action2
 	while ($true) {sleep 5}
