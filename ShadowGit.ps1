@@ -4,6 +4,13 @@
     $watcher.Filter = "*.*"
     $watcher.IncludeSubdirectories = $true
     $watcher.EnableRaisingEvents = $true  
+	
+### DEFINE ACTIONS AFTER AN EVENT IS DETECTED
+    $action1 = { $path = $Event.SourceEventArgs.FullPath
+                $changeType = $Event.SourceEventArgs.ChangeType
+                $logline = "$(Get-Date), $changeType, $path"
+                Add-content "D:\log.txt" -value $logline
+              } 	
 
 ### DEFINE ACTIONS AFTER AN EVENT IS DETECTED
     $action = { cmd.exe /c 'Speedy_Git.bat'  } 
