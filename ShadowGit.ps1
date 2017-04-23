@@ -20,8 +20,8 @@
 	$A = Start-Process -FilePath "G:\Side_Project\Snipenator\Speedy_Git.bat";
 	
 ### DECIDE WHICH EVENTS SHOULD BE WATCHED
-    Register-ObjectEvent $watcher "Created" -Action $A
-    Register-ObjectEvent $watcher "Changed" -Action $A
-    Register-ObjectEvent $watcher "Deleted" -Action $A
-    Register-ObjectEvent $watcher "Renamed" -Action $A
+    Register-ObjectEvent $watcher "Created" -Wait -Action $A
+    Register-ObjectEvent $watcher "Changed" -Wait -Action $A
+    Register-ObjectEvent $watcher "Deleted" -Wait -Action $A
+    Register-ObjectEvent $watcher "Renamed" -Wait -Action $A
 	while ($true) {sleep 5}
