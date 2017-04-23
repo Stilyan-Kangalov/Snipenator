@@ -13,9 +13,9 @@
               } 	
 
 ### DEFINE ACTIONS AFTER AN EVENT IS DETECTED
-    $action = { cmd.exe /c 'Speedy_Git.bat'  } 
+    $action2 = { & "G:\Side_Project\Snipenator\Speedy_Git.bat" } 
 	
-	$action2 = { cmd.exe /c 'git add .'  } 
+	$action3 = { cmd.exe /c 'git add .'  } 
 	
 ### DECIDE WHICH EVENTS SHOULD BE WATCHED
     Register-ObjectEvent $watcher "Created" -Action $action2
