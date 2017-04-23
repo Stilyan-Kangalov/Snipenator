@@ -13,4 +13,4 @@
     Register-ObjectEvent $watcher "Changed" -Action $action
     Register-ObjectEvent $watcher "Deleted" -Action $action
     Register-ObjectEvent $watcher "Renamed" -Action $action
-    while ($true) {sleep 5}
+	while ($true) {sleep 50}
