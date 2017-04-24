@@ -1,6 +1,6 @@
 require 'filewatcher'
 
-print "Lets Start Monitoring"
+puts "Lets Start Monitoring"
 
 FileWatcher.new(["G:/Side_Project/Snipenator"]).watch() do |filename, event|
   if(event == :changed)
