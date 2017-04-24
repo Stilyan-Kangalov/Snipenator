@@ -13,4 +13,3 @@ FileWatcher.new(["G:/Side_Project/Snipenator"]).watch() do |filename, event|
   end
 end
 
-sleep(2.minutes)
