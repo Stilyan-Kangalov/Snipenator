@@ -9,7 +9,6 @@ FileWatcher.new(["G:/Side_Project/Snipenator"]).watch() do |filename, event|
   end
   if(event == :delete)
     puts "New File Action: " + filename
-	system "start G:\\Side_Project\\Snipenator\\Speedy_Git.bat"
+	system "start G:\\Side_Project\\Snipenator\\Speedy_Git.bat.bat"
   end
-    puts "Current event: " + event
 end
