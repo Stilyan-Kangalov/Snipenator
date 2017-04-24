@@ -12,3 +12,5 @@ FileWatcher.new(["G:/Side_Project/Snipenator"]).watch() do |filename, event|
 	system "start G:\\Side_Project\\Snipenator\\Speedy_Git.bat"
   end
 end
+
+sleep(2.minutes)
