@@ -11,5 +11,5 @@ FileWatcher.new(["G:/Side_Project/Snipenator"]).watch() do |filename, event|
     puts "New File Action: " + filename
 	system "start G:\\Side_Project\\Snipenator\\Speedy_Git.bat"
   end
-    puts event
+    puts "Current event: " + event
 end
