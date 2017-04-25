@@ -1,15 +1,24 @@
 require 'filewatcher'
+puts "###############################################################################"
+puts "############################## Shadow Git #####################################"
+puts
+puts "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="
+puts "Start Monitoring: " + Dir.pwd
+puts "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="
+puts
 
-puts "Lets Start Monitoring"
+$dir = Dir.pwd
 
-FileWatcher.new(["G:/Side_Project/Snipenator"]).watch() do |filename, event|
+FileWatcher.new([$dir]).watch() do |filename, event|
   if(event == :changed)
     puts "File updated: " + filename
-	system "start G:\\Side_Project\\Snipenator\\Speedy_Git.bat"
+	puts "#####"
+	system "start " + $dir + "/Speedy_Git.bat"
   end
   if(event == :delete)
     puts "New File Action: " + filename
-	system "start G:\\Side_Project\\Snipenator\\Speedy_Git.bat"
+	puts "#####"
+	system "start " + $dir + "/Speedy_Git.bat"
   end
 end
 
