@@ -54,9 +54,7 @@ nav {
   background-color: #163249;
 }
 
-button:focus {
-  background-color: #163249;
-}
+button:focus { background-color: #163249; }
 
 #lang-buttons {
   text-align: center;
